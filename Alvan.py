@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import telebot
+import telebot #pytelegrambotapi
 from telebot import types
 import time
 import urllib
@@ -95,7 +95,6 @@ def callbacks(call):
                     markup.add(janebimobile)
                     markup.add(console)
                     bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text = textt,reply_markup=markup)
-
                 elif call.data == "software":
                     textt = "یک گروه را انتخاب کنید."
                     janebisoft = types.InlineKeyboardButton("نرم افزار کاربردی",callback_data="janebisoft")
